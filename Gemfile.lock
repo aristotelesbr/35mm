@@ -88,6 +88,7 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     digest (3.1.0)
+    dotenv (2.7.6)
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -170,6 +171,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-env (2.0.2)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
     railties (7.0.2.2)
@@ -218,6 +220,7 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    superconfig (2.1.0)
     thor (1.2.1)
     timeout (0.2.0)
     turbo-rails (1.0.1)
@@ -243,18 +246,21 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  dotenv (~> 2.7, >= 2.7.6)
   importmap-rails
   minitest-utils (~> 0.4.8)
   pg (~> 1.1)
   pry-meta
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  rails-env (~> 2.0, >= 2.0.2)
   rubocop
   rubocop-performance
   rubocop-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  superconfig (~> 2.1)
   turbo-rails
   webdrivers
 
