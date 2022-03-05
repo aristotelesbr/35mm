@@ -1,0 +1,17 @@
+---
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  EnabledByDefault: true
+  TargetRubyVersion: 3.1.0
+  TargetRailsVersion: 7.0.2
+
+Style/Copyright:
+  Description: 'Include a copyright notice in each file before any code.'
+  Enabled: false
+  VersionAdded: '0.30'
+  Notice: '^Copyright (\(c\) )?2[0-9]{3} .+'
+  AutocorrectNotice: ''
