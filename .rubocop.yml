@@ -9,6 +9,30 @@ AllCops:
   TargetRubyVersion: 3.1.0
   TargetRailsVersion: 7.0.2
 
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Rails/SchemaComment:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Rails/RefuteMethods:
+  Enabled: false
+
 Style/Copyright:
   Description: 'Include a copyright notice in each file before any code.'
   Enabled: false
