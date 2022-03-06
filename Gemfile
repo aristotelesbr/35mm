@@ -80,7 +80,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-
+  
   # Selenium implements the W3C WebDriver protocol to automate popular browsers.
   # It aims to mimic the behaviour of a real user as it interacts with the application's HTML.
   # It's primarily intended for web application testing, but any web-based task can automated.
