@@ -59,6 +59,21 @@ gem 'ar-uuid', '~> 0.2.2'
 # A simple observer implementation for POROs (Plain Old Ruby Object) and ActiveRecord objects.
 gem 'voltage', '~> 0.1.0'
 
+# Make ActiveRecord's PostgreSQL adapter always use bigint columns
+gem 'ar-bigint', '~> 0.2.0'
+
+# Make ActiveRecord's PostgreSQL adapter use timestamptz as datetime columns
+gem 'ar-timestamptz', '~> 0.2.0'
+
+# Generate Heroku-like memorable random names like adorable-ox-1234.
+gem 'haikunate', '~> 0.1.1'
+
+# Create and verify signed urls. Supports expiration time.
+gem 'url_signature', '~> 0.0.2'
+
+# Set default values for ActiveRecord attributes
+gem 'defaults', '~> 2.0'
+
 group :development, :test do
   # Meta package that requires several pry extensions.
   gem 'pry-meta'
@@ -80,7 +95,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  
+
   # Selenium implements the W3C WebDriver protocol to automate popular browsers.
   # It aims to mimic the behaviour of a real user as it interacts with the application's HTML.
   # It's primarily intended for web application testing, but any web-based task can automated.

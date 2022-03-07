@@ -33,6 +33,12 @@ Style/DocumentationMethod:
 Rails/RefuteMethods:
   Enabled: false
 
+Style/StringHashKeys:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
 Style/Copyright:
   Description: 'Include a copyright notice in each file before any code.'
   Enabled: false
