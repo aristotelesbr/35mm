@@ -16,18 +16,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_06_174956) do
   enable_extension "plpgsql"
 
   create_table "auth_codes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.text "code", null: false
+    t.binary "encrypted_code", null: false
+    t.bigint "keyring_id", null: false
+    t.text "code_digest", null: false
     t.timestamptz "expires_at", null: false
     t.timestamptz "created_at", null: false
     t.timestamptz "updated_at", null: false
-    t.index ["code"], name: "index_auth_codes_on_code", unique: true
+    t.index ["code_digest"], name: "index_auth_codes_on_code_digest", unique: true
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.text "email", null: false
+    t.binary "encrypted_email", null: false
+    t.text "email_digest", null: false
+    t.bigint "keyring_id", null: false
     t.timestamptz "created_at", null: false
     t.timestamptz "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["email_digest"], name: "index_users_on_email_digest", unique: true
   end
 
 end

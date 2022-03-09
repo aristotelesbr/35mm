@@ -74,6 +74,9 @@ gem 'url_signature', '~> 0.0.2'
 # Set default values for ActiveRecord attributes
 gem 'defaults', '~> 2.0'
 
+# Simple encryption-at-rest plugin for ActiveRecord.
+gem 'attr_keyring', '~> 0.6.1'
+
 group :development, :test do
   # Meta package that requires several pry extensions.
   gem 'pry-meta'

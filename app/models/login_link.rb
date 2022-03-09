@@ -17,7 +17,9 @@ module LoginLink
 
     return unless params['code']
 
-    auth_code = AuthCode.lock.where('expires_at > now()').find_by(code: params['code'])
+    code_digest = AuthCode.keyring.digest(params['code'])
+
+    auth_code = AuthCode.lock.find_by('expires_at > now() and code_digest = :code_digest', code_digest:)
 
     return unless auth_code
 
