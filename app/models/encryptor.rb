@@ -2,7 +2,7 @@
 
 module Encryptor
   def self.encrytor
-    ActiveSupport::MessageEncryptor.new(Base64.decode64(Lens::Config.encryptor_secret))
+    ActiveSupport::MessageEncryptor.new(Base64.decode64(Photomatic::Config.encryptor_secret))
   end
 
   def self.encrypt(unencrypted_message, expires_in: nil, purpose: nil)

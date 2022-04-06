@@ -6,11 +6,11 @@ module LoginLink
 
     url = Rails.application.routes.url_helpers.verify_email_url(email:, code: auht_code.code)
 
-    SignedURL.call(url, key: Lens::Config.signed_url_secret)
+    SignedURL.call(url, key: Photomatic::Config.signed_url_secret)
   end
 
   def self.valid?(signed_url)
-    return unless SignedURL.verified?(signed_url, key: Lens::Config.signed_url_secret)
+    return unless SignedURL.verified?(signed_url, key: Photomatic::Config.signed_url_secret)
 
     uri = URI(signed_url)
     params = Rack::Utils.parse_query(uri.query)

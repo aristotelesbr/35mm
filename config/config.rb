@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Lens
+module Photomatic
   Config =
     SuperConfig.new(raise_exception: false) do
       mandatory :tz, string
