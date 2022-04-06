@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   route :login do
     create as: 'login'
   end
+
+  # Shows a screen saying that email has been sent.
+  get 'check-inbox' => 'login#check_inbox', as: :check_inbox
+
+  # Confirm the email that has been sent by validating it against the auth code.
+  get 'verify-email' => 'login#verify_email', as: :verify_email
 end
