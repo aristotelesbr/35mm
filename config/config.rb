@@ -12,6 +12,9 @@ module Lens
       credential :user_digest_salt
       mandatory :database_url, string
       optional :app_host, string, 'example.com'
+      optional :default_email_sender, string, 'hi@example.com'
+      optional :force_ssl, bool, true
+      optional :email_verification_ttl, int, 10.minutes
     end
 
   public_constant :Config

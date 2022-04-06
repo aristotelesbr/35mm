@@ -11,7 +11,7 @@ class CreateAuthCodes < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :users, :created_at
+    add_index :auth_codes, :created_at
     add_index :auth_codes, :code_digest, unique: true
   end
 end
