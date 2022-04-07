@@ -18,6 +18,16 @@ FileUtils.chdir APP_ROOT do
   # This is macOS
   system!('brew bundle install --file Brewfile') if RUBY_PLATFORM.include?('darwin')
 
+  # This is Linux
+  if RUBY_PLATFORM.include?('linux')
+    system!('sudo apt install -y curl')
+    system!('sudo sudo apt install -y libpq-dev')
+    system!('sudo apt install -y postgresql postgresql-contrib')
+    system!('go install github.com/mailhog/MailHog@latest')
+  end
+
+
+
   puts '== Installing dependencies =='
   system! 'gem install bundler --conservative'
   system('bundle check') || system!('bundle install')

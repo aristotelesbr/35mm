@@ -1,7 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
 
 export class Hello extends Controller {
-  connect() {
-    this.element.textContent = "Hello World!"
+  static targets = ['name'];
+
+  nameTarget: HTMLSpanElement;
+
+  handleSayHello() {
+    this.nameTarget.textContent = 'John';
   }
 }
