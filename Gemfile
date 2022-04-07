@@ -9,7 +9,10 @@ ruby '3.1.0'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
+gem 'sprockets-rails', '~> 3.4', '>= 3.4.2'
+
+# Bundle and transpile JavaScript in Rails with esbuild, rollup.js, or Webpack.
+gem 'jsbundling-rails', '~> 1.0', '>= 1.0.2'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -18,13 +21,13 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
+gem 'importmap-rails', '~> 1.0', '>= 1.0.3'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
+gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+gem 'stimulus-rails', '~> 1.0', '>= 1.0.4'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
