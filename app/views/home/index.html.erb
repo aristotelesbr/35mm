@@ -4,13 +4,13 @@
   <%= link_to 'Create your account', login_path %>
 <% end %>
 
+
 <div data-controller="hello">
   <p>
     hello there <span data-hello-target="name">stranger</span>!
   </p>
 
   <p>
-    <button data-action="click->hello#handleSayHello">Click</button>
+    <button class="rounded-full bg-sky-600 px-5 py-2 text-white" data-action="click->hello#handleSayHello">Click</button>
   </p>
-
 </div>

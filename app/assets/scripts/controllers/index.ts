@@ -1,16 +1,16 @@
-import { Application } from "@hotwired/stimulus"
+import { Application } from "@hotwired/stimulus";
 
-import { Hello } from './hello'
+import { Hello } from "./hello";
 
-const application = Application.start()
+const application = Application.start();
 
 declare const window: Window &
   typeof globalThis & { Stimulus: typeof application };
 
-application.register('hello', Hello)
+application.register("hello", Hello);
 
 // Configure Stimulus development experience
-application.debug = true
-window.Stimulus = application
+application.debug = true;
+window.Stimulus = application;
 
-export { application }
+export { application };
