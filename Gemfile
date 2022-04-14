@@ -83,6 +83,9 @@ gem 'attr_keyring', '~> 0.6.1'
 # A simple authentication system for Rails apps
 gem 'simple_auth', '~> 3.1', '>= 3.1.3'
 
+# Integrate Tailwind CSS with the asset pipeline in Rails.
+gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.8'
+
 group :development, :test do
   # Meta package that requires several pry extensions.
   gem 'pry-meta'

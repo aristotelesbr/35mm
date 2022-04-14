@@ -2,12 +2,14 @@
   "name": "app",
   "private": "true",
   "scripts": {
-    "build": "esbuild app/assets/scripts/*.* --minify --bundle --sourcemap --outdir=app/assets/builds"
+    "build": "esbuild app/assets/scripts/*.* --minify --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "tailwindcss --minify --input ./app/assets/stylesheets/application.css --output ./app/assets/builds/application.css"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
     "esbuild": "^0.14.32",
+    "global": "^4.4.0",
     "typescript": "^4.6.3"
   }
 }
